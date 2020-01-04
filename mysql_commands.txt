@@ -1,5 +1,8 @@
 mysql-ctl cli
 
+CREATE DATABASE <db_name>;
+use <db_name>;
+
 CREATE TABLE people ( 
     first_name VARCHAR(20), 
     last_name VARCHAR(20), 
