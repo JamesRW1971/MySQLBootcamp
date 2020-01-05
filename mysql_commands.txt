@@ -20,5 +20,68 @@ SELECT * FROM people;
 
 DESC people;
 
+========================================
+
+mysql-ctl cli
+
+CREATE DATABASE <db_name>;
+use <db_name>;
+
 DROP DATABASE <name>
 DROP TABLE <name>
+
+
+**** TABLE CREATION****
+
+CREATE TABLE cats ( 
+    name VARCHAR(100), 
+     age INT 
+     );
+
+// NOT NULL
+CREATE TABLE cats2 ( 
+    name VARCHAR(100) NOT NULL, 
+     age INT NOT NULL
+     );
+
+// DEFAULT
+CREATE TABLE cats3( 
+    name VARCHAR(100) DEFAULT 'unnamed', 
+     age INT DEFAULT 99
+     );
+
+// DEFAULT and NOT NULL  
+// Prevents a manual insert of NULL
+// ie INSERT INTO cats3(name, age) VALUES ('james', NULL) is not an error
+// ie INSERT INTO cats4(name, age) VALUES ('james', NULL) is an error
+CREATE TABLE cats4 ( 
+    name VARCHAR(100) NOT NULL DEFAULT 'unnamed', , 
+     age INT NOT NULL DEFAULT 99, 
+     );
+
+CREATE TABLE unique_cats
+  (
+    cat_id INT NOT NULL,
+    name VARCHAR(100),
+    age INT,
+    PRIMARY KEY (cat_id)
+  );
+
+CREATE TABLE unique_cats2
+  (
+    cat_id INT NOT NULL AUTO INCREMENT,
+    name VARCHAR(100),
+    age INT,
+    PRIMARY KEY (cat_id)
+  );
+
+  or
+
+        CREATE TABLE unique_cats2
+        (
+            cat_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+            name VARCHAR(100),
+            age INT
+        );
+
+  
