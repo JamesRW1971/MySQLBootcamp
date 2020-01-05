@@ -69,7 +69,7 @@ CREATE TABLE unique_cats
 
 CREATE TABLE unique_cats2
   (
-    cat_id INT NOT NULL AUTO INCREMENT,
+    cat_id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(100),
     age INT,
     PRIMARY KEY (cat_id)

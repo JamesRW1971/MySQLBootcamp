@@ -1,0 +1,40 @@
+*Create
+    INSERT INTO ...
+*Read
+        CREATE TABLE cats
+        (
+            cat_id INT NOT NULL AUTO_INCREMENT,
+            name VARCHAR(100),
+            breed VARCHAR(100),
+            age INT,
+            PRIMARY KEY (cat_id)
+        );
+
+    SELECT * FROM cats; 
+    SELECT name FROM cats; 
+    SELECT age FROM cats; 
+    SELECT cat_id FROM cats; 
+    SELECT name, age FROM cats; 
+    SELECT cat_id, name, age FROM cats; 
+    SELECT age, breed, name, cat_id FROM cats; 
+    SELECT cat_id, name, age, breed FROM cats; 
+
+    (Alias) SELECT cat_id AS id, name, age, breed FROM cats; 
+    (Alias) SELECT cat_id AS id, name AS cat_name, age, breed FROM cats; 
+
+    SELECT * FROM cats WHERE age=4;
+
+*Update
+    UPDATE <table> SET <column>=<value> WHERE <codition>
+    UPDATE cats SET breed='Shorthair' WHERE breed='Tabby'
+
+*Delete
+    SELECT * FROM cats WHERE age=4;
+    DELETE FROM cats WHERE age=4;
+    SELECT * FROM cats WHERE age=4;
+    SELECT * FROM cats;
+    SELECT *  FROM cats WHERE cat_id=age;
+    DELETE FROM cats WHERE cat_id=age;
+    DELETE FROM cats;
+    SELECT * FROM cats;
+
